@@ -1,10 +1,12 @@
 package studying.factories;
 
+import org.springframework.stereotype.Component;
 import studying.domains.Car;
 import studying.domains.HandEngine;
 import studying.interfaces.ICarFactory;
 import studying.params.EmptyEngineParams;
 
+@Component
 public class HandCarFactory implements ICarFactory<EmptyEngineParams> {
     @Override
     public Car createCar(EmptyEngineParams carParams, int carNumber) {

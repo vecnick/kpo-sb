@@ -1,10 +1,12 @@
 package studying.services;
 
+import org.springframework.stereotype.Component;
 import studying.interfaces.ICarProvider;
 import studying.interfaces.ICustomerProvider;
 
 import java.util.Objects;
 
+@Component
 public class HseCarService {
 
     private final ICarProvider carProvider;

@@ -1,11 +1,13 @@
 package studying.services;
 
+import org.springframework.stereotype.Component;
 import studying.domains.Customer;
 import studying.interfaces.ICustomerProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CustomerStorage implements ICustomerProvider {
     private List<Customer> customers = new ArrayList<>();
 
