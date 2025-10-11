@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="homework_second_try" target="17" />
+      <module name="homework_second_try.main" target="17" />
+      <module name="homework_second_try.test" target="17" />
+      <module name="practise-1" target="21" />
+      <module name="practise-1.main" target="21" />
+      <module name="practise-1.test" target="21" />
+      <module name="project" target="21" />
+      <module name="project.main" target="21" />
+      <module name="project.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="project" options="-parameters" />
+      <module name="project.main" options="-parameters" />
+      <module name="project.test" options="-parameters" />
+    </option>
+  </component>
+</project>
