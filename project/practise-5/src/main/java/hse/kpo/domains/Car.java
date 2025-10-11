@@ -19,6 +19,9 @@ public class Car {
     }
 
     public boolean isCompatible(Customer customer) {
-        return this.engine.isCompatible(customer, ProductionTypes.CAR);// внутри метода просто вызываем соответствующий метод двигателя
+        boolean isStrong = customer.getLegPower() > 5 || customer.getHandPower() > 5;
+        boolean isClever = customer.getIq() > 300;
+
+        return this.engine.isCompatible(customer, ProductionTypes.CAR) && (isClever || isStrong);// внутри метода просто вызываем соответствующий метод двигателя
     }
 }
