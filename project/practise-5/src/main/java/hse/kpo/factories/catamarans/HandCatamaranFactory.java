@@ -7,9 +7,9 @@ import hse.kpo.params.EmptyEngineParams;
 
 public class HandCatamaranFactory implements ICatamaranFactory<EmptyEngineParams> {
     @Override
-    public Catamaran create(EmptyEngineParams catamaranParams) {
+    public Catamaran create(EmptyEngineParams catamaranParams, int catamaranNumber) {
         var engine = new HandEngine();
 
-        return new Catamaran(engine);
+        return new Catamaran(catamaranNumber, engine);
     }
 }

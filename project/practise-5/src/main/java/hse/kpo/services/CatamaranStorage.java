@@ -11,7 +11,7 @@ import java.util.List;
 public class CatamaranStorage implements ICatamaranProvider {
     private final List<Catamaran> catamarans = new ArrayList<>();
 
-//    private int catamaranNumberCounter = 0;
+    private int catamaranNumberCounter = 0;
 
     @Override
     public Catamaran takeCatamaran(Customer customer) {
@@ -29,8 +29,8 @@ public class CatamaranStorage implements ICatamaranProvider {
     {
         // создаем автомобиль из переданной фабрики
         var catamaran = catamaranFactory.create(
-                catamaranParams // передаем параметры
-//                ++catamaranNumberCounter // передаем номер - номер будет начинаться с 1
+                catamaranParams, // передаем параметры
+                ++catamaranNumberCounter // передаем номер - номер будет начинаться с 1
         );
 
         catamarans.add(catamaran); // добавляем автомобиль

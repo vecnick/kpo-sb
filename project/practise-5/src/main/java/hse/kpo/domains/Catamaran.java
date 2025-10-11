@@ -7,9 +7,11 @@ import lombok.ToString;
 @ToString
 public class Catamaran {
     IEngine engine;
+    int number;
 
-    public Catamaran(IEngine engine) {
+    public Catamaran(int number, IEngine engine) {
         this.engine = engine;
+        this.number = number;
     }
 
     public boolean isCompatible(Customer customer) {
