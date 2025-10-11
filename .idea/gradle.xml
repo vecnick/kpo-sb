@@ -4,42 +4,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/homework" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/homework" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/homework_second_try" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/homework_second_try" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/practices/practise-1" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/practices/practise-1" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/project" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
       </GradleProjectSettings>
