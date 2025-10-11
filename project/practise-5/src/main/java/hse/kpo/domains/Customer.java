@@ -23,6 +23,9 @@ public class Customer {
     @Setter
     private Car car;
 
+    @Setter
+    private Catamaran catamaran;
+
     public Customer(String name, int legPower, int handPower, int iq) {
         this.name = name;
         this.legPower = legPower;
