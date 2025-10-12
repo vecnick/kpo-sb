@@ -1,0 +1,13 @@
+[versions]
+kotlin = "2.2.20"
+arrow = "2.1.2"
+
+[libraries]
+arrow-core = { group = "io.arrow-kt", name = "arrow-core", version.ref = "arrow" }
+
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+
+[bundles]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

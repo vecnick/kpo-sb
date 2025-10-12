@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 group = "ru.dnd"
@@ -9,13 +9,16 @@ repositories {
     mavenCentral()
 }
 
+kotlin {
+    jvmToolchain(21)
+}
+
 dependencies {
-    testImplementation(kotlin("test"))
+    implementation(libs.arrow.core)
+
+    testImplementation(libs.kotlin.test)
 }
 
 tasks.test {
     useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
 }
