@@ -1,7 +1,6 @@
 package hse.kpo.interfaces;
 
-import hse.kpo.domains.Car;
-import lombok.experimental.UtilityClass;
+import hse.kpo.domain.Car;
 
 public interface ICarFactory<TParams> {
     Car create(TParams carParams, int carNumber);

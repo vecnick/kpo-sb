@@ -1,10 +1,9 @@
 package hse.kpo.services;
 
-import hse.kpo.domains.Car;
-import hse.kpo.domains.Customer;
+import hse.kpo.domain.Car;
+import hse.kpo.domain.Customer;
 import hse.kpo.interfaces.ICarFactory;
 import hse.kpo.interfaces.ICarProvider;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

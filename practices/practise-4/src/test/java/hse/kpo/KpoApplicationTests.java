@@ -1,6 +1,6 @@
 package hse.kpo;
 
-import hse.kpo.domains.Customer;
+import hse.kpo.domain.Customer;
 import hse.kpo.factories.HandCarFactory;
 import hse.kpo.factories.PedalCarFactory;
 import hse.kpo.params.EmptyEngineParams;
