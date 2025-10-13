@@ -1,7 +1,7 @@
 package hse.kpo.interfaces;
 
 
-import hse.kpo.domains.Customer;
+import hse.kpo.domain.Customer;
 
 public interface IEngine {
 

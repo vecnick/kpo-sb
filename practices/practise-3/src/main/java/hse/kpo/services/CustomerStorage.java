@@ -1,6 +1,6 @@
 package hse.kpo.services;
 
-import hse.kpo.domains.Customer;
+import hse.kpo.domain.Customer;
 import hse.kpo.interfaces.ICustomerProvider;
 import org.springframework.stereotype.Component;
 

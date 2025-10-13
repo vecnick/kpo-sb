@@ -1,8 +1,8 @@
 package hse.kpo.factories.cars;
 
 
-import hse.kpo.domains.Car;
-import hse.kpo.domains.PedalEngine;
+import hse.kpo.domain.Car;
+import hse.kpo.domain.PedalEngine;
 import hse.kpo.interfaces.ICarFactory;
 import hse.kpo.params.PedalEngineParams;
 import org.springframework.stereotype.Component;
