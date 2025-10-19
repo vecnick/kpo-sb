@@ -32,13 +32,5 @@ tasks.test {
 }
 
 tasks.jacocoTestReport {
-    dependsOn(test)
-    reports {
-        xml.required.set(true)
-        html.required.set(true)
-    }
-}
-
-application {
-    mainClass.set("hse.kpo.homework1.ZooApp")
+    dependsOn(tasks.test)
 }
