@@ -4,6 +4,7 @@ plugins {
     id("io.freefair.lombok") version "8.6"
     jacoco
     java
+    checkstyle
 }
 
 group = "hse.kpo.homework1"
@@ -25,6 +26,13 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.32")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+checkstyle {
+    toolVersion = "10.13.0"
+    isIgnoreFailures = false
+    maxWarnings = 0
+    maxErrors = 0
 }
 
 tasks.test {

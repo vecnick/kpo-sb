@@ -1,7 +1,7 @@
 # ERP-система для Московского зоопарка
 
-Консольное приложение для автоматизации учета животных и инвентаря Московского зоопарка. 
-Система позволяет вести учет животных, проверять их здоровье перед приемом, рассчитывать 
+Консольное приложение для автоматизации учета животных и инвентаря Московского зоопарка.
+Система позволяет вести учет животных, проверять их здоровье перед приемом, рассчитывать
 потребность в корме и формировать списки животных для контактного зоопарка.
 
 ## Инструкция по запуску
@@ -9,126 +9,132 @@
 ### Требования
 - Java 17 или выше
 - Gradle 7.0 или выше
-
+- 
 ### Запуск приложения
-
-**Через Gradle:**
-```bash
-cd homework
-./gradlew bootRun
-```
-
-**Через JAR файл:**
 ```bash
 cd homework
 ./gradlew build
-java -jar build/libs/homework-1.0-SNAPSHOT.jar
+./gradlew bootRun
 ```
 
 ## Применение принципов SOLID
 
 ### 1. Single Responsibility Principle (SRP)
 
-Каждый класс отвечает за одну конкретную задачу:
+Каждый класс отвечает за одну задачу:
 
-- **`Animal`** - отвечает только за хранение базовых данных о животном (имя, корм, инвентарный номер)
-- **`Herbo`** - отвечает за хранение данных о травоядных (добавляет свойство доброты)
-- **`Predator`** - отвечает за хранение данных о хищниках
-- **`Thing`** - отвечает только за хранение данных о предметах инвентаря
-- **`ZooService`** - отвечает только за управление животными и инвентарем зоопарка
-- **`VetClinicService`** - отвечает только за проверку здоровья животных
+- **`ZooService`** - управление коллекцией животных и инвентаря
+- **`VetClinicService`** - проверка здоровья животных
+- **`ZooConsoleController`** - обработка пользовательских команд
+- **`AnimalRegistry`** - регистрация и создание типов животных
+- **`CommandRegistry`** - управление командами приложения
+- **`Animal`, `Herbo`, `Predator`** - хранение данных о животных
+- **Конкретные команды** (`AddAnimalCommand`, `FoodReportCommand`) - каждая отвечает за одно действие
 
 ### 2. Open/Closed Principle (OCP)
 
-Классы открыты для расширения, но закрыты для модификации:
-
-- **Иерархия животных**: базовый класс `Animal` → промежуточные классы `Herbo` и `Predator` → 
-  конкретные виды (`Monkey`, `Rabbit`, `Tiger`, `Wolf`). Можно добавлять новые виды животных, 
-  не изменяя существующий код.
-- **Иерархия предметов**: базовый класс `Thing` → конкретные предметы (`Table`, `Computer`). 
-  Легко добавить новые типы инвентаря без изменения базового класса.
-- **Сервисы**: можно расширять функциональность `ZooService`, добавляя новые методы, 
-  не изменяя существующие.
+Система открыта для расширения, но закрыта для модификации:
+- Новые типы животных добавляются через `AnimalRegistry` без изменения существующего кода
+- Новые команды добавляются в `CommandRegistry` без модификации `ZooConsoleController`
+- Новые проверки здоровья можно добавить через реализацию `IHealthChecker`
+- Абстрактные классы `Animal`, `Herbo`, `Predator` позволяют создавать новые виды животных через наследование
 
 ### 3. Liskov Substitution Principle (LSP)
 
-Объекты подклассов можно использовать вместо объектов родительских классов:
-
-- Любой объект типа `Monkey`, `Rabbit`, `Tiger` или `Wolf` может использоваться везде, 
-  где ожидается `Animal`.
-
-- Любой объект типа `Herbo` или `Predator` может использоваться вместо `Animal`.
-
-- Любой объект типа `Table` или `Computer` может использоваться вместо `Thing`.
-
-- Любой объект, реализующий `IInventory`, может быть добавлен в инвентарь зоопарка 
-  (как предметы, так и животные).
+Все наследники могут использоваться вместо базовых классов:
+- `Monkey`, `Rabbit` используются вместо `Herbo` или `Animal`
+- `Tiger`, `Wolf` используются вместо `Predator` или `Animal`
+- Все команды взаимозаменяемы через интерфейс `ConsoleCommand`
 
 ### 4. Interface Segregation Principle (ISP)
 
-Интерфейсы содержат только необходимые методы:
+Интерфейсы разделены по назначению:
+- **`IAlive`** - для живых существ
+- **`IInventory`** - для инвентаризируемых объектов
+- **`IHealthChecker`** - для проверки здоровья
+- **`ConsoleCommand`** - для команд консоли
+- **`FlexibleAnimalFactory`** - для создания животных
 
-- **`IAlive`** - содержит только методы для работы с питанием живых существ (`getFood`, `setFood`). 
-  Клиенты, которым не нужна информация о питании, не зависят от этого интерфейса.
+Классы реализуют только те интерфейсы, которые им нужны.
 
-- **`IInventory`** - содержит только методы для инвентаризации (`getNumber`, `setNumber`). 
-  Используется как животными, так и предметами, но не навязывает лишних методов.
+### 5. Dependency Inversion Principle (DIP)
 
-- **`IHealthChecker`** - содержит только один метод `checkHealth()` для проверки здоровья. 
-  Клиенты зависят только от необходимой функциональности.
+Зависимости от абстракций, а не от конкретных реализаций:
+- `ZooService` зависит от `IHealthChecker`, а не от `VetClinicService`
+- `AnimalRegistry` использует `FlexibleAnimalFactory`
+- `CommandRegistry` работает с `ConsoleCommand`, а не с конкретными командами
+- Все зависимости внедряются через Spring DI Container
 
-Интерфейсы специализированы и не заставляют классы реализовывать ненужные методы.
+## Паттерны проектирования
 
-### 5. Dependency Inversion Principle (DIP) - Принцип инверсии зависимостей
+### Factory Pattern
+`AnimalRegistry` и `AnimalTypeDefinition` реализуют фабричный паттерн для создания животных с произвольными параметрами.
 
-Высокоуровневые модули не зависят от низкоуровневых, оба зависят от абстракций:
+### Command Pattern
+`ConsoleCommand` и его реализации (`AddAnimalCommand`, `FoodReportCommand`, etc.) инкапсулируют команды как объекты.
 
-- **`ZooService`** зависит от абстракции `IHealthChecker`, а не от конкретного класса `VetClinicService`.
-  Это позволяет легко заменить реализацию проверки здоровья без изменения кода `ZooService`.
+### Registry Pattern
+`AnimalRegistry` и `CommandRegistry` обеспечивают централизованное управление типами животных и командами.
 
-  ```java
-  @Autowired
-  public ZooService(IHealthChecker healthChecker) {
-      this.healthChecker = healthChecker;
-  }
-  ```
-
-- **`VetClinicService`** реализует интерфейс `IHealthChecker`, что делает его взаимозаменяемым 
-  с любой другой реализацией этого интерфейса.
-
-- Использование интерфейсов `IAlive` и `IInventory` также следует DIP - код работает с абстракциями, 
-  а не с конкретными реализациями.
-
-## Применение Dependency Injection (DI) контейнера
-
-Проект использует **Spring Framework DI Container** для управления зависимостями:
-
-- **`@SpringBootApplication`** - автоматическая конфигурация Spring контейнера
-- **`@Service`** - регистрация сервисов в Spring контейнере (`ZooService`, `VetClinicService`)
-- **`@Autowired`** - автоматическое внедрение зависимостей через конструктор
+### Dependency Injection
+Spring контейнер управляет всеми зависимостями через `@Autowired` и `@Component`.
 
 ## Структура проекта
 
 ```
 src/main/java/hse/kpo/homework1/
-├── interfaces/          # Интерфейсы (ISP, DIP)
-│   ├── IAlive.java
-│   ├── IInventory.java
-│   └── IHealthChecker.java
-├── living/              # Доменная модель животных (SRP, OCP, LSP)
-│   ├── Animal.java
-│   ├── Herbo.java
-│   ├── Predator.java
-│   ├── Monkey.java
-│   ├── Rabbit.java
-│   ├── Tiger.java
-│   └── Wolf.java
-├── inventory/           # Доменная модель предметов (SRP, OCP, LSP)
-│   ├── Thing.java
-│   ├── Table.java
-│   └── Computer.java
-├── service/             # Бизнес-логика (SRP, DIP)
-│   ├── ZooService.java
-│   └── VetClinicService.java
-└── ZooApp.java          # Точка входа в приложение
+├── ZooApp.java                          # Главный класс приложения
+├── command/                             
+│   ├── ConsoleCommand.java              # Интерфейс команды
+│   ├── CommandRegistry.java             # Регистр команд
+│   └── impl/                            # Конкретные команды
+│       ├── AddAnimalCommand.java
+│       ├── FoodReportCommand.java
+│       ├── ContactZooCommand.java
+│       ├── InventoryReportCommand.java
+│       └── ExitCommand.java
+├── controller/
+│   └── ZooConsoleController.java        # Контроллер команд
+├── factory/                             
+│   ├── FlexibleAnimalFactory.java       # Фабрика
+│   ├── AnimalParameter.java             # Описание параметра
+│   ├── AnimalTypeDefinition.java        # Определение типа
+│   └── AnimalRegistry.java              # Регистр типов животных
+├── interfaces/
+│   ├── IAlive.java                      # Интерфейс живого существа
+│   ├── IHealthChecker.java              # Интерфейс проверки здоровья
+│   └── IInventory.java                  # Интерфейс инвентаря
+├── inventory/
+│   ├── Thing.java                       # Базовый класс предметов
+│   ├── Table.java                       # Стол
+│   └── Computer.java                    # Компьютер
+├── living/
+│   ├── Animal.java                      # Базовый класс животных
+│   ├── Herbo.java                       # Травоядные
+│   ├── Predator.java                    # Хищники
+│   ├── Monkey.java                      # Обезьяна
+│   ├── Rabbit.java                      # Кролик
+│   ├── Tiger.java                       # Тигр
+│   └── Wolf.java                        # Волк
+└── service/
+    ├── ZooService.java                  # Сервис зоопарка
+    └── VetClinicService.java            # Ветеринарная клиника
 ```
+
+## Тестирование
+
+Проект покрыт unit-тестами с использованием JUnit 5 и Mockito:
+
+- `AnimalTest` - тесты классов животных
+- `ThingTest` - тесты предметов
+- `VetClinicServiceTest` - тесты ветклиники
+- `ZooServiceTest` - тесты сервиса зоопарка
+- `ZooConsoleControllerTest` - тесты контроллера
+- `AnimalRegistryTest` - тесты регистра животных
+
+Запуск тестов с отчетом о покрытии:
+```bash
+./gradlew test jacocoTestReport
+```
+
+Отчет доступен в: `build/reports/jacoco/test/html/index.html`
