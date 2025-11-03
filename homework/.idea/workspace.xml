@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29c394fc-53a4-4b32-b0d1-6b44763f3e3b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/expanded/expanded.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Alive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/AnimalFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/AppModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Computer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Herbivore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Inventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Monkey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Predator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Rabbit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Thing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Tiger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/VeterinaryClinic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/VeterinaryClinicImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Wolf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/zoo/Zoo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/zoo/ZooTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/homework-1.0.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/homework-1.0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacoco/test.exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/homework-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/zoo.ZooTests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/zoo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/homework" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/homework.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-zoo.ZooTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/jacocoagent.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/org/jacoco/agent/AgentJar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/.cache/expanded/zip_0bd0851504e6286cb5fc6f37a81e25cc/org/jacoco/agent/package-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Alive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/AnimalFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/AppModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Herbivore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Monkey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Predator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Rabbit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Thing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Tiger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/VeterinaryClinic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/VeterinaryClinicImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Wolf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/Zoo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/zoo/ZooTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="homework" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="33vnowt2aFsA6898AnOQPJGJN9A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.ZooTests.executor": "Run",
+    "Gradle.homework [:zoo.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/olozavr/Documents/projects/kpo-sb/homework/homework2"
+  }
+}]]></component>
+  <component name="RunManager" selected="Gradle.ZooTests">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="zoo.Main" />
+      <module name="homework.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zoo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZooTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;zoo.ZooTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ZooTests" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29c394fc-53a4-4b32-b0d1-6b44763f3e3b" name="Changes" comment="" />
+      <created>1760206592090</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760206592090</updated>
+    </task>
+    <servers />
+  </component>
+</project>
