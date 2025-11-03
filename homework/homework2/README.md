@@ -1,43 +1,65 @@
-# HSE-Bank Finances Module
+# Gradle / IntelliJ Instructions
 
 
-Проект демонстрирует реализацию доменной модели модуля "Учет финансов" на Java с акцентом на SOLID, GRASP и набор паттернов проектирования.
+Я добавил `build.gradle`, `settings.gradle` и небольшие настройки в проект. Чтобы запускать проект через **Gradle Wrapper** и удобно работать в **IntelliJ IDEA**, следуйте шагам ниже.
 
 
-Запуск
+## 1) Сгенерировать Gradle Wrapper (если его нет)
 
 
-1. Скомпилировать:
-   javac -d out $(find src -name "*.java")
-2. Запустить:
-   java -cp out com.hsebank.Main
+Если у вас установлен Gradle локально, выполните в корне проекта:
 
 
-Реализовано
+```bash
+gradle wrapper --gradle-version 8.4
+```
 
 
-- Доменные классы: BankAccount, Category, Operation
-- Factory для создания объектов с валидацией
-- Репозитории (in-memory)
-- Сервисы/Facade для работы с сущностями
-- Command для пользовательских сценариев
-- Decorator для измерения времени выполнения команд
-- Template Method для импорта (CSV/JSON)
-- Visitor для экспорта в CSV
-- Легковесный DI-контейнер для сборки зависимостей
+Если Gradle не установлен, сделайте одно из:
+- Откройте проект в IntelliJ — IDEA предложит синхронизировать Gradle и/или создать wrapper.
+- Или установите Gradle временно и выполните команду выше.
 
 
-Отчет по SOLID/GRASP
+> После успешного создания в проекте появятся: `gradlew`, `gradlew.bat` и папка `gradle/wrapper/`.
 
 
-SRP: каждый класс имеет одну ответственность
-OCP: сервисы используют интерфейсы репозиториев
-LSP: наследование минимально, используются композируемые интерфейсы
-ISP: интерфейсы разделены по ролям
-DIP: зависимости инжектируются через конструкторы и контейнер
+## 2) Запуск через wrapper
 
 
-Паттерны
+Unix / macOS:
+```bash
+./gradlew build
+./gradlew run
+```
 
 
-- Factory, Repository, Facade, Command, Decorator, Template Method, Visitor, Proxy (in-memory as simple cache), DI Container
+Windows (Powershell / cmd):
+```powershell
+gradlew.bat build
+gradlew.bat run
+```
+
+
+Команда `run` использует плагин `application` и точку входа `com.hsebank.Main`.
+
+
+## 3) Импорт и запуск в IntelliJ IDEA
+
+
+1. File -> Open... -> выберите корневую папку проекта (там где `build.gradle`).
+2. IDEA предложит импортировать проект как Gradle — выберите **Use Gradle wrapper**.
+3. Укажите JDK (рекомендуется Java 17) для проекта: File -> Project Structure -> Project SDK.
+4. Откройте Gradle tool window (справа) — найдите Tasks -> application -> `run`. Дважды кликните `run`, чтобы запустить через wrapper.
+
+
+Также можно создать конфигурацию Run/Debug:
+- Run -> Edit Configurations -> + -> Application
+- Name: HSE-Bank
+- Main class: `com.hsebank.Main`
+- Use classpath of module: выберите модуль (IDEA обычно создаёт автоматически)
+- Для запуска через Gradle wrapper используйте Gradle конфигурацию: + -> Gradle -> Tasks: `run`.
+
+
+## 4) Советы
+- Если вы хотите, чтобы wrapper уже присутствовал в репозитории — сгенерируйте wrapper локально и закоммитьте файлы `gradlew`, `gradlew.bat` и `gradle/wrapper/*`.
+- При CI используйте `./gradlew build` для сборки и тестов.
