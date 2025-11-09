@@ -4,43 +4,10 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/homework/bank" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/homework/MoscowZoo" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/homework/MoscowZoo" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/practices/practise-1" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/practices/practise-1" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/practices/practise-4" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/practices/practise-4" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/practices/practise-5" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/practices/practise-5" />
+            <option value="$PROJECT_DIR$/homework/bank" />
           </set>
         </option>
       </GradleProjectSettings>
